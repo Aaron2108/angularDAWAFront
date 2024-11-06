@@ -1,0 +1,43 @@
+<div class="form-container">
+    <h2 class="form-title">Nuevo Usuario</h2>
+    <form id="usuarioForm">
+        <div class="mb-3">
+            <label for="usuario" class="form-label">Usuario</label>
+            <input type="text" class="form-control" id="usuario" name="usuario" required>
+        </div>
+        <div class="mb-3">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo" required>
+        </div>
+        <div class="mb-3">
+            <label for="contraseña" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="contraseña" name="contraseña" required>
+        </div>
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" required>
+        </div>
+        <div class="mb-3">
+            <label for="direccion" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" required>
+        </div>
+        <div class="mb-3">
+            <label for="rolId" class="form-label">Rol</label>
+            <select class="form-select" id="rolId" name="rol_id" required>
+                <option value="" disabled selected>Seleccione un rol</option>
+                <option value="1">Administrador</option>
+                <option value="2">Usuario Normal</option>
+                <option value="3">Editor</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="estadoId" class="form-label">Estado</label>
+            <select class="form-select" id="estadoId" name="estado_id" required>
+                <option value="" disabled selected>Seleccione un estado</option>
+                <option value="1">Activo</option>
+                <option value="2">Inactivo</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+    </form>
+</div>

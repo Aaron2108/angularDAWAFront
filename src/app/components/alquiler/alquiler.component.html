@@ -1,0 +1,67 @@
+<div class="form-container">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" style="width: 0%;" id="progressBar"></div>
+    </div>
+    
+    <h2>Nuevo Alquiler</h2>
+    <form id="alquilerForm">
+      <div class="mb-3">
+        <label for="fechaInicio" class="form-label">Fecha de Inicio</label>
+        <input type="date" class="form-control" id="fechaInicio" name="fecha_inicio" required>
+      </div>
+      <div class="mb-3">
+        <label for="fechaFin" class="form-label">Fecha de Fin</label>
+        <input type="date" class="form-control" id="fechaFin" name="fecha_fin" required>
+      </div>
+      <div class="mb-3">
+        <label for="precio" class="form-label">Precio</label>
+        <input type="number" class="form-control" id="precio" name="precio" required>
+      </div>
+      <div class="mb-3">
+        <label for="costoExtra" class="form-label">Costo Extra</label>
+        <input type="number" class="form-control" id="costoExtra" name="costo_extra" required>
+      </div>
+      <div class="mb-3">
+        <label for="comentario" class="form-label">Comentario</label>
+        <textarea class="form-control" id="comentario" name="comentario" rows="3" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="solicitudId" class="form-label">Solicitud</label>
+        <select class="form-select" id="solicitudId" name="solicitud_id" required>
+          <option value="" disabled selected>Seleccione una solicitud</option>
+          <option value="1">Solicitud 1</option>
+          <option value="2">Solicitud 2</option>
+          <option value="3">Solicitud 3</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="estadoId" class="form-label">Estado</label>
+        <select class="form-select" id="estadoId" name="estado_id" required>
+          <option value="" disabled selected>Seleccione un estado</option>
+          <option value="1">Activo</option>
+          <option value="2">Pendiente</option>
+          <option value="3">Finalizado</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="fechaEntrega" class="form-label">Fecha de Entrega</label>
+        <input type="date" class="form-control" id="fechaEntrega" name="fecha_entrega" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Enviar</button>
+    </form>
+</div>
+
+<script>
+  // Progreso del formulario basado en campos completados
+  const form = document.getElementById('alquilerForm');
+  const progressBar = document.getElementById('progressBar');
+  
+  form.addEventListener('input', () => {
+    const inputs = form.querySelectorAll('input, textarea, select');
+    const filledFields = Array.from(inputs).filter(input => input.value.trim() !== '').length;
+    const totalFields = inputs.length;
+    const progress = (filledFields / totalFields) * 100;
+    
+    progressBar.style.width = `${progress}%`;
+  });
+</script>

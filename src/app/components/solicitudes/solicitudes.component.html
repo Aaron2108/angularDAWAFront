@@ -1,0 +1,48 @@
+<div class="form-container">
+    <h2 class="form-title">Nueva Solicitud</h2>
+    <form id="solicitudForm">
+        <div class="mb-3">
+            <label for="licenciaPdf" class="form-label">Licencia PDF</label>
+            <input type="url" class="form-control" id="licenciaPdf" name="licencia_pdf" required>
+        </div>
+        <div class="mb-3">
+            <label for="diasAlquiler" class="form-label">Días de Alquiler</label>
+            <input type="number" class="form-control" id="diasAlquiler" name="dias_alquiler" required>
+        </div>
+        <div class="mb-3">
+            <label for="pasajeros" class="form-label">Pasajeros</label>
+            <input type="number" class="form-control" id="pasajeros" name="pasajeros" required>
+        </div>
+        <div class="mb-3">
+            <label for="comentario" class="form-label">Comentario</label>
+            <textarea class="form-control" id="comentario" name="comentario" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="vehiculoId" class="form-label">Vehículo</label>
+            <select class="form-select" id="vehiculoId" name="vehiculo_id" required>
+                <option value="" disabled selected>Seleccione un vehículo</option>
+                <option value="1">Vehículo 1</option>
+                <option value="2">Vehículo 2</option>
+                <option value="3">Vehículo 3</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="estadoId" class="form-label">Estado</label>
+            <select class="form-select" id="estadoId" name="estado_id" required>
+                <option value="" disabled selected>Seleccione un estado</option>
+                <option value="1">Activo</option>
+                <option value="2">Inactivo</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="usuarioId" class="form-label">Usuario</label>
+            <select class="form-select" id="usuarioId" name="usuario_id" required>
+                <option value="" disabled selected>Seleccione un usuario</option>
+                <option value="1">Usuario 1</option>
+                <option value="2">Usuario 2</option>
+                <option value="3">Usuario 3</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+    </form>
+</div>
